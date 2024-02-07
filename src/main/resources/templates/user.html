@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .user-dashboard {
+            width: 400px;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .user-profile {
+            border: 2px solid #007bff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        .logout-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 400px;
+           margin-left: -280px;
+        }
+
+        .logout-button:hover {
+            background-color: #e77132;
+        }
+
+        .btns
+        {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+            
+        }
+        .btn1{
+            margin-top: 50px;
+            margin-bottom: 70px;
+            
+        }
+
+        .btns a{
+            background-color: #76eff1;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+         .btns a:hover{
+            background-color: rgb(237, 237, 75);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, [[${user.getName()}]]</h1>
+    </header>
+
+    <section>
+        <div class="user-dashboard">
+            <div class="user-profile">
+                <h2>User Dashboard</h2>
+                <div class="btns btn1">
+                    <a href="">History</a>
+                    <a th:href="@{/appoint}">New Appointment</a>
+                </div>
+                <div class="btns btn2">
+
+                    <a href="">Doctor</a>
+                    <a href="">Reports</a>
+                </div>
+            </div>
+           
+        </div>
+
+        <div>
+            <form th:action="@{/userout}" method="post" >
+                <button type="submit" class="logout-button" onclick="logout()" >Logout</button>
+              </form>
+        </div>
+        
+    </section>
+
+    <script>
+        function logout() {
+            
+            alert('Are you want to logout');
+        }
+    </script>
+
+</body>
+</html>

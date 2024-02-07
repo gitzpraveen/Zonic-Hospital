@@ -1,0 +1,170 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: aliceblue;
+    }
+
+    form {
+      width: 530px;
+      height: 480px;
+      padding: 5px;
+      border-radius: 25px;
+      background-color:rgb(212, 226, 240);
+      position: absolute;
+      left: 34%;
+      top: 20%;
+    }
+
+    .container {
+      min-width: 300px;
+    }
+
+    button {
+      padding: 5px;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-left: 200px;
+      margin-top: 10px;
+      background-color: greenyellow;
+      cursor: pointer;
+      border: 1px solid rgb(131, 113, 113);
+      width: 100px;
+    }
+
+    form>h2 {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    #gen {
+      font-weight: bold;
+      margin-left: 80px;
+    }
+
+
+    .radio-group {
+      display: flex;
+     
+
+    }
+
+    .radio-group label {
+      margin-right: 20px;
+      /* Adjust spacing as needed */
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .message {
+            margin-top: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color:limegreen;
+            color:rgb(255, 255, 255);
+            text-align: center;
+            width: 400px;
+            font-weight: bolder;
+            position: absolute;
+            top:15%;
+            left: 50%;
+            margin-left: 25px;
+            transform: translate(-50%,-50%);
+        } 
+
+
+      .login
+      {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .loganchor:hover{
+        color: #1616e7;
+        text-decoration: underline;
+      }
+
+      .loganchor
+      {
+        text-decoration: none;
+        color: rgb(233, 44, 44);
+      }
+    /* Hide the actual radio buttons */
+    .radio-group input[type="radio"] {
+      display: none;
+    }
+
+    /* Style the custom radio buttons */
+    .radio-group .custom-radio {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #130e70;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      top: 5px;
+
+    }
+
+    /* Style the custom radio buttons when selected */
+    .radio-group input[type="radio"]:checked+.custom-radio::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background-color: #4815c8;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+
+    }
+
+    .btn:hover
+    {
+      color: white;
+      background-color: #111212;
+    }
+
+
+    input {
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      margin-bottom: 10px;
+      margin-left: 80px;
+      width: 350px;
+      height: 28px;
+      padding: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-left: 80px;
+      margin-bottom: 4px;
+    }
+    .content
+    {
+      display: flex;
+    
+     
+    }
+
+    .gen-content1
+    {
+   
+      margin-left: -70px;
+      margin-top: -5px;
+    }
+
+    .gen-content2
+    {
+   
+      margin-left: -70px;
+      margin-top: -5px;
+    }

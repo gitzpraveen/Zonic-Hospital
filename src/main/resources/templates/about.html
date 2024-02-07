@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Zonic Hospital</title>
+    <link rel="icon" th:href="@{/images/zlogo.png}">
+    <link rel="stylesheet" th:href="@{/css/about.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+
+            <!-- header starts -->
+            <header>
+
+                <div>
+                    <img th:src="@{/images/zlogo.png}" class="logoImg" >
+                </div>
+        
+                <div class="search">
+                    
+                    <input type="search" name="" id="" placeholder="   Search -- ' Praveen Demo Project '">
+                </div>
+        
+                <div class="navLink">
+                    <ul>
+                        <li><a th:href="@{/}">Home</a></li>
+                        <li><a th:href="@{/about}">About</a></li>
+                        <li><a th:href="@{/achieve}">Contact</a></li>
+                        <li><a th:href="@{/appoint}">Appointment</a></li>
+                        <li><a th:href="@{/login}">Login</a></li>
+                    </ul>
+                </div>
+        
+           
+        
+            </header>
+                  <!-- header ends -->
+    
+
+    <div class="container">
+
+       
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Welcome to Zonic Hospital, where we are dedicated to providing high-quality healthcare services to our community. With a commitment to excellence and a focus on patient-centered care, we strive to make a positive impact on the well-being of our patients.</p>
+        </div>
+
+        <div class="content">
+        <h2>Our Mission</h2>
+        <p>Our mission is to deliver compassionate and comprehensive medical services that meet the highest standards of quality. We aim to enhance the health and lives of our patients through a holistic approach to healthcare, combining medical expertise with personalized attention.</p>
+        </div>
+
+        <div class="content">
+        <h2>Our Team</h2>
+        <p>At Zonic Hospital, we are proud to have a team of skilled healthcare professionals, including doctors, nurses, and support staff. Each member of our team is dedicated to providing the best possible care and ensuring the comfort and satisfaction of our patients.</p>
+        </div>
+
+        <div class="content">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to schedule an appointment, please feel free to contact us. We are here to serve you and
+             address your healthcare needs. <strong class="appointment"><a th:href="@{/appoint}">Book an Appointment</a></strong></p>
+        </div>
+
+
+        <div class="content">
+        <p>Thank you for choosing Zonic Hospital for your healthcare journey.</p>
+         </div>
+
+</body>
+</html>

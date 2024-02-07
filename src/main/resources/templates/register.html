@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration form</title>
+ 
+  <link rel="stylesheet"  th:href="@{../css/register.css}"> 
+  <link rel="stylesheet"  th:href="@{../css/index.css}">
+</head>
+
+<body>
+
+     <!-- header starts -->
+     <header>
+
+      <div>
+          <img th:src="@{/images/zlogo.png}" class="logoImg" >
+      </div>
+
+      <div class="search">
+          
+          <input type="search" name="" id="" placeholder="   Search -- ' Praveen Demo Project '">
+      </div>
+
+      <div class="navLink">
+          <ul>
+              <li><a th:href="@{/}">Home</a></li>
+              <li><a th:href="@{/about}">About</a></li>
+              <li><a th:href="@{/achieve}">Contact</a></li>
+              <li><a th:href="@{/appoint}">Appointment</a></li>
+              <li><a th:href="@{/login}">Login</a></li>
+          </ul>
+      </div>
+
+ 
+
+  </header>
+        <!-- header ends -->
+
+
+        <!-- register form start -->
+
+  <div class="container">
+
+   
+
+    <form th:action="@{/registerUser}" th:object="${user}" method="post" >
+      <h2>User Registration</h2>
+
+      
+      <label for="">UserName</label><br>
+      <input type="text" th:field="*{username}" required><br>
+      <label for="">Email</label><br>
+      <input type="email" th:field="*{email}" required> <br>
+      <label for="">Phone Number</label><br>
+      <input type="number" th:field="*{phno}" required><br>
+      <label for="">Password</label><br>
+      <input type="password"th:field="*{password}"   id="password" required><br>
+      <label for="">Confirm Password</label><br>
+      <input type="password"    id="cpassword" required> <br>
+      <p id="message"></p>
+      <div class="radio-group">
+        <span id="gen">Gender :</span>
+        <div class="content">
+          <div class="gen-content1">
+            <label class="female">
+              <input type="radio" name="gender" value="male" checked>
+              <span class="custom-radio"></span> Male
+            </label>
+          </div>
+
+          <div class="gen-content2">
+            <label class="female">
+              <input type="radio" name="gender" value="female">
+              <span class="custom-radio"></span> Female
+            </label>
+          </div>
+
+        </div>
+      </div>
+      <br><button type="submit" class="btn" onclick="checkPassword()">Register</button>
+
+      <div class="login">
+        <h4>Already registered? <a  th:href="@{/login}" class="loganchor">Login</a></h4>
+      </div>
+    </form>
+
+   
+
+
+
+  </div>
+
+  <div class="message" id="message" th:if="${message!=null}">
+    [[${message}]]
+ </div>
+        <!-- register form end -->
+
+
+        <script>
+
+          function checkPassword()
+          {
+            let password=document.getElementById("password").value;
+            let cpassword=document.getElementById("cpassword").value;
+
+            let message=document.getElementById("message");
+
+            console.log("Password:",password,'\n',"Confirm Password:",cpassword);
+
+            if(password.length!=0)
+            {
+              if(password==cpassword)
+              {
+                
+              }
+              else{
+                message.textContent="Sorry, Password don't match";
+                message.style.backgroundColor="#ff4d4d";
+              }
+            }
+            else{
+              alert("password can't be empty!");
+              message.textContent="";
+            }
+
+
+
+          }
+        </script>
+
+</body>
+
+</html>

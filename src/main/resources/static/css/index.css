@@ -1,0 +1,295 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:white;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-color: rgb(236, 239, 242);
+    border-radius: 10px;
+}
+
+.logoImg
+{
+    width: 50px;
+    height: 50px;
+    margin: 13px;
+    border-radius: 50%;
+    margin-left: 25px;
+}
+
+.navLink>ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: 200px;
+
+}
+.jig
+{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+
+}
+.achieve>div>img{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin-left: 200px;
+
+   
+}
+.ac>p{
+
+    column-count: 2;
+    padding: 40px;
+    text-align: justify;
+    margin-left: 5px;
+    column-gap: 30px;
+    font-size: 1.1em;
+
+}
+.achieve>div>h2{
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+.achieve
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-left: 10px;
+}
+.navLink>ul>li{
+    margin: 17px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    list-style: none;
+   
+
+    
+}
+
+.navLink>ul>li>a{
+    text-decoration: none;
+    border: 0.5px solid rgb(236, 239, 242);
+    padding: 8px;
+    border-radius: 15px;
+    position: sticky;
+}
+
+.navLink>ul>li>a:hover{
+   
+   background-color: rgb(221, 221, 233);
+   color: rgb(254, 6, 6);
+   
+   
+}
+.para
+{
+    text-indent: 100px;
+    font-size:  1.2em;
+    text-align: justify;
+    margin-top: 10px;
+    line-height: 25px;
+    padding: 30px;
+    column-count: 3;
+    column-gap: 50px;
+   
+ 
+}
+.mainHeader
+{
+    color: rgb(56, 63, 164);
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 10px;  
+}
+.imgMid
+{
+  
+    display: flex;
+    margin-top: 10px;
+   
+    
+}
+.ac{
+    margin-top: 50px;
+}
+#imgMids
+{
+    background-size: cover;
+    width:40%;
+    height: 400px;
+    padding: 10px;
+    margin-left: 40px;
+    border-radius: 50px;
+   
+
+
+}
+.imgMid>p{
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 50px;
+    padding: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.branch
+{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold ;
+    font-size: xx-large;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+.search>input
+{
+    width: 450px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+.members{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: 20px;
+   justify-content: space-around;
+    
+
+  
+}
+.members>div
+{
+    margin-left: 20px;
+}
+.members>div>img
+{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: 60px;
+    border: 1px solid rgb(245, 238, 238);
+    margin-top: 10px;
+}
+
+#two
+{
+    margin-top: 50px;
+}
+
+.linksWeb a:hover
+{
+    color: rgb(209, 19, 19);
+    text-decoration: underline;
+}
+
+.search input
+{
+	padding: 15px;
+	outline: none;
+}
+
+
+
+
+.members>div>h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    font-size: x-large;
+}
+
+.footer
+{
+    width: 100%;
+    height: auto;
+    background-color: rgb(236, 239, 242);
+    border-radius: 10px;
+}
+.footer>div>h4{
+    text-align: center;
+    padding: 10px;
+   
+}
+
+.add
+{
+    line-height: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+#span
+{
+    font-weight: bold;
+}
+
+.foot-flex
+{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.links
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-top: 20px;
+    line-height: 35px;
+}
+
+.links>a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links>a:hover{
+    color: rgb(235, 32, 22);
+   
+    
+}
+.sol
+{
+    margin-left: 80px;
+    margin-top: 25px;
+}
+.sol>h4{
+    margin-bottom: 10px;
+}
+.foot-fot{
+    line-height: 14px;
+}
+
+.linksWeb>p>a
+{
+    text-decoration: none;
+   font-weight: bold;
+
+   
+}
