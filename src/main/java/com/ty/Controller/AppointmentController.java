@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.ty.Entity.Appointment;
 import com.ty.Service.AppointmentSevice;
 
-
 @Controller
-public class AppointmentController 
-{
+public class AppointmentController {
 	@Autowired
 	private AppointmentSevice service;
 
@@ -24,12 +22,12 @@ public class AppointmentController
 	}
 
 	@PostMapping("/appointUser")
-	public String registerUser(@ModelAttribute("appoint") Appointment appointment,Model model) {
+	public String registerUser(@ModelAttribute("appoint") Appointment appointment, Model model) {
 		service.register(appointment);
-		model.addAttribute("message","Appointment registered Successfully");
-	
+		model.addAttribute("message", "Appointment registered Successfully");
+
 		return "appoint";
-	
+
 	}
 
 }

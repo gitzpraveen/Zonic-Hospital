@@ -10,18 +10,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class UserController
-{
+public class UserController {
 	@Autowired
 	private UserDetailsService userDetailsService;
-	
+
 	@GetMapping("/user")
-	public String user(Model model,Principal principal)
-	{
-		UserDetails userDetails=userDetailsService.loadUserByUsername(principal.getName());
+	public String user(Model model, Principal principal) {
+		UserDetails userDetails = userDetailsService.loadUserByUsername(principal.getName());
 		model.addAttribute("user", userDetails);
 		return "user";
 	}
-
 
 }

@@ -11,14 +11,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 
 public class Appointment {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long pid;
@@ -28,7 +27,7 @@ public class Appointment {
 	private String date;
 	@Column(length = 2000)
 	private String additionalInformation;
-	
+
 	@ManyToOne
 	private User user;
 

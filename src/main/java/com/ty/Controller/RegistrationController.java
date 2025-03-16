@@ -17,27 +17,24 @@ public class RegistrationController {
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
-	
+
 	@GetMapping("/register")
 	public String register(Model model) {
 		User user = new User();
-		
+
 		model.addAttribute("user", user);
 		return "register";
 	}
 
 	@PostMapping("/registerUser")
-	public String registerUser(@ModelAttribute("user") User user,Model model) 
-	{
-		
+	public String registerUser(@ModelAttribute("user") User user, Model model) {
+
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		service.register(user);
-		model.addAttribute("message","Registered Successfully");
+		model.addAttribute("message", "Registered Successfully");
 		System.out.println("registered successfully");
 		return "register";
-	
+
 	}
-	
-	
-	
+
 }

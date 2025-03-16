@@ -22,43 +22,32 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @EnableWebSecurity
 @Configuration
-public class SecurityConfig 
-{
+public class SecurityConfig {
 	@Autowired
 	private CustomUserDetailsService customUserDetailsService;
-	
+
 	@Bean
-	public  static PasswordEncoder passwordEncoder()
-	{
-		 return new BCryptPasswordEncoder();
+	public static PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
 	}
-	
-	
-	
-	
+
 	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
-	{
-		String[] REGISTER= {"/register", "/registerUser", "/css/**", "/images/**"};
-		String[] CONTENT= {"/", "/about","/achieve","/dashboard","/userout"};
-		
-		http.csrf(csrf->csrf.disable()).authorizeHttpRequests(auth->auth.requestMatchers(REGISTER).permitAll()
-										.requestMatchers(CONTENT).permitAll()
-										.anyRequest().authenticated())
-			.formLogin(form->form.loginPage("/login").loginProcessingUrl("/userlogin").permitAll())
-			.logout(out->out.logoutSuccessUrl("/userout").permitAll());
-		
-			
-				
-																		
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		String[] REGISTER = { "/register", "/registerUser", "/css/**", "/images/**" };
+		String[] CONTENT = { "/", "/about", "/achieve", "/dashboard", "/userout" };
+
+		http.csrf(csrf -> csrf.disable())
+				.authorizeHttpRequests(auth -> auth.requestMatchers(REGISTER).permitAll().requestMatchers(CONTENT)
+						.permitAll().anyRequest().authenticated())
+				.formLogin(form -> form.loginPage("/login").loginProcessingUrl("/userlogin").permitAll())
+				.logout(out -> out.logoutSuccessUrl("/userout").permitAll());
+
 		return http.build();
-		
+
 	}
-	
-	
+
 	@Autowired
-	public  void ConfigureAction(AuthenticationManagerBuilder auth) throws Exception
-	{
+	public void ConfigureAction(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());
 	}
 

@@ -10,37 +10,35 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class ContentController {
-	
+
 	@GetMapping("/")
-	public String index()
-	{
+	public String index() {
 		return "index";
 	}
 
-	
 	@GetMapping("/about")
-	public String about()
-	{
+	public String about() {
 		return "about";
 	}
 
 	@GetMapping("/achieve")
-	public String contact()
-	{
+	public String contact() {
 		return "achieve";
 	}
-	
+
 	@GetMapping("/dashboard")
-	public String dashboard()
-	{
+	public String dashboard() {
 		return "dashboard";
 	}
-	
+
 	@PostMapping("/userout")
-	public String userout(Model model,HttpServletRequest request) throws ServletException
-	{
+	public String userout(Model model, HttpServletRequest request) throws ServletException {
 		request.logout();
 		return "redirect:/";
 	}
 
+	@GetMapping("/doctors")
+	public String doctor() {
+		return "doctor";
+	}
 }

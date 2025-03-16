@@ -21,8 +21,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name = "user-register")
 public class User implements Serializable {
-	
-	
+
 	private static final long serialVersionUID = 1L;
 	private String username;
 	@Id
@@ -31,11 +30,10 @@ public class User implements Serializable {
 	@NaturalId
 	private String email;
 	private String phno;
-	private  String  password;
+	private String password;
 	private String role;
-	
+
 	@OneToMany
-	 private List<Appointment> appointments;
-	
-	
+	private List<Appointment> appointments;
+
 }

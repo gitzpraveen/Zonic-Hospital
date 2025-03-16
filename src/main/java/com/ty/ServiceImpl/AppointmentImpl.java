@@ -12,13 +12,11 @@ public class AppointmentImpl implements AppointmentSevice {
 
 	@Autowired
 	private AppointmentRepository repository;
-	
+
 	@Override
-	public void register(Appointment appointment) 
-	{
+	public void register(Appointment appointment) {
 		repository.save(appointment);
-		
-		
+
 	}
 
 }

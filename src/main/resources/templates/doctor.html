@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .doctor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .doctor-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+        .doctor-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .doctor-card h3 {
+            font-size: 18px;
+            color: #333;
+        }
+        .doctor-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .anc
+        {
+            
+        }
+    </style>
+</head>
+<body>
+    <h2 class="anc"><a th:href="@{/}"> << Back to Home </a></h2>
+
+    <h1 style="text-align:center; padding:20px;">Doctors List</h1>
+
+    <div class="doctor-container">
+        <div class="doctor-card">
+            <img th:src="@{/images/doctor1.jpg}" alt="Doctor 1">
+            <h3>Dr. John Doe</h3>
+            <p>Cardiologist</p>
+        </div>
+        <div class="doctor-card">
+            <img th:src="@{/images/doctor6.jpg}" alt="Doctor 2">
+            <h3>Dr. Jane Smith</h3>
+            <p>Neurologist</p>
+        </div>
+        <div class="doctor-card">
+            <img th:src="@{/images/doctor3.jpg}" alt="Doctor 3">
+            <h3>Dr. Ramya </h3>
+            <p>Orthopedist</p>
+        </div>
+        <div class="doctor-card">
+            <img th:src="@{/images/doctor4.jpg}" alt="Doctor 4">
+            <h3>Dr. Emma Brown</h3>
+            <p>Pediatrician</p>
+        </div>
+        <div class="doctor-card">
+            <img th:src="@{/images/doctor5.jpg}" alt="Doctor 5">
+            <h3>Dr. James Wilson</h3>
+            <p>Dermatologist</p>
+        </div>
+        <div class="doctor-card">
+            <img th:src="@{/images/doctor2.jpg}" alt="Doctor 6">
+            <h3>Dr. Olivia Taylor</h3>
+            <p>Gynecologist</p>
+        </div>
+    </div>
+
+</body>
+</html>
